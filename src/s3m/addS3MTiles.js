@@ -1,4 +1,4 @@
-import { Viewer } from "cesium";
+import { Viewer, defined } from "cesium";
 import S3MTilesLayer from './S3M_module/S3MTiles/S3MTilesLayer.js';
 
 /**
@@ -18,7 +18,7 @@ export const addS3MTiles = (viewer, url) => {
 
     layer.readyPromise.then(function () {
         var position = layer._position;
-        if (position && Cesium.defined(position)) {
+        if (position && defined(position)) {
             viewer.camera.flyTo({
                 destination: position
             })

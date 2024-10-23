@@ -56,7 +56,7 @@ module.exports = [{
             CESIUM_BASE_URL: JSON.stringify('')
         }),
         AutoImport({
-            include: [/\.[tj]sx?$/],
+            include: [/S3M_module.*\.[tj]sx?$/],
             imports: [
                 {
                     'cesium': [['*', 'Cesium']]
