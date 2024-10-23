@@ -20,12 +20,7 @@ export const addS3MTiles = (viewer, url) => {
         var position = layer._position;
         if (position && Cesium.defined(position)) {
             viewer.camera.flyTo({
-                destination: position,
-                // orientation: {
-                //     heading: 77.01705644125006,
-                //     pitch: -0.1,
-                //     roll: 6.281137397480966
-                // }
+                destination: position
             })
         } else {
             console.log('无法获取到 layer 的位置信息');
